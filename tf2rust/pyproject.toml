@@ -1,0 +1,26 @@
+[project]
+name = "tf2rust"
+dependencies = []
+
+[tool.poetry]
+name = "tf2rust"
+version = "0.2.0"
+description = ""
+authors = ["Crowdstrike DSCI <dsci-oss@crowdstrike.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+argparse = "^1.4"
+numpy = "^1.23"
+pydot = "^1.4"
+scikit-learn = "^1.1"
+tensorflow = "^2.8"
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+isort = "^5.10.1"
+pytest = "^6"
+
+[tool.isort]
+profile = "black"
