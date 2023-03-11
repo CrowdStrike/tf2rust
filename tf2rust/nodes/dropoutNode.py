@@ -32,7 +32,7 @@ class DropoutNode(Node):
             )
 
         operation_list.append(
-            "let {node.name} = {node.type}::new({input}, tensorflow_layers::Activation::{node.activation});".format(
+            "let {node.name} = {node.type}::new({input}, tensorflow_layers::Dropout::{node.rate});".format(
                 node=self, input=args
             )
         )
