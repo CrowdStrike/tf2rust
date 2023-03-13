@@ -26,6 +26,7 @@ from nodes import (
     tensorFlowAdd2Node,
     tensorFlowMeanNode,
     thresholdedrelu,
+    dropoutNode,
 )
 
 parser = argparse.ArgumentParser(description="Arguments for the python scripts")
@@ -132,6 +133,7 @@ LAYERS_DICTIONARY = {
         "mean": tensorFlowMeanNode.TensorFlowMeanNode,
         "add": tensorFlowAdd2Node.TensorFlowADD2Node,
     },
+    "Dropout": dropoutNode.DropoutNode,
 }
 
 
