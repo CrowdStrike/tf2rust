@@ -10,7 +10,7 @@ from tensorflow.keras.layers import (
     SpatialDropout1D,
 )
 
-from nodes import (
+from .nodes import (
     activationNode,
     batchNormalizationNode,
     concatenateNode,

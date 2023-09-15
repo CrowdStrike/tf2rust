@@ -25,7 +25,7 @@ class DropoutNode(Node):
             ["{}_weight_{}".format(self.name, i) for i in range(len(self.weights_list))]
         )
 
-        # if bias doesnt exist
+        # if bias doesn't exist
         if len(self.weights_list) == 1:
             args = ", ".join(
                 [args, "Array1::zeros({})".format(self.weights_list[0].shape[1])]
@@ -38,10 +38,10 @@ class DropoutNode(Node):
         )
 
         return operation_list
-    
+
     def declare_build(self):
         return (self.name, self.type)
-    
+
     def apply_layer(self):
         assert len(self.connections["inbounds"]) == 1
         assert (

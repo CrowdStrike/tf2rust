@@ -7,10 +7,9 @@ import numpy as np
 # `sk-learn` has to be imported before `tf` is ever used... https://github.com/scikit-learn/scikit-learn/issues/14485
 import sklearn
 import tensorflow as tf
-from .surgeon.operations import delete_layer
 from tensorflow.keras.models import load_model
 
-from constants import (
+from tf2rust.constants import (
     DELETE_LAYERS,
     FILE_PATH_COMPUTATIONAL_GRAPH,
     FILE_PATH_MODEL_ARCHITECTURE,
@@ -19,7 +18,9 @@ from constants import (
     PATH_TO_TF_MODEL,
     get_class,
 )
-from utils.scoring_metrics import tnr, tpr
+
+from .scoring_metrics import tnr, tpr
+from .surgeon.operations import delete_layer
 
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
